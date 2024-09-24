@@ -1,0 +1,77 @@
+:root {
+    --users-width: 90%;
+    --name-phone-width: 23%;
+    --schedule-width: 15%;
+    --reserv-width: 6%;
+    --options-width: 10%;
+}
+
+#reserv-controller {
+    background-color: #b4b4b4;
+    width: var(--users-width);
+    margin: 2em auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+
+.reserv-info,
+.reserv-info-title {
+    background-color: ghostwhite;
+    border-radius: 8px;
+    width: calc(var(--users-width) + 5%);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.reserv-info-title div {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.reserv-info div {
+    margin: 5px;
+}
+
+.reserv-name,
+.name-title,
+.reserv-suc,
+.suc-title,
+.reserv-date,
+.date-title {
+    width: var(--name-phone-width);
+}
+
+.schedule-title,
+.reserv-schedule {
+    width: var(--schedule-width);
+}
+
+.reserv-cantPerson,
+.cantPerson-title {
+    width: var(--reserv-width);
+}
+
+.options,
+.options-title {
+    width: var(--options-width);
+}
+
+@media (max-width: 930px) {
+    #reserv-controller {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+    #reserv-controller {
+        font-size: 55%;
+    }
+}

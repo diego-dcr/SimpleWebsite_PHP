@@ -1,0 +1,67 @@
+:root {
+    --branch-card-background-color: rgba(0, 0, 0, 0.7);
+    --branch-letters-color: whitesmoke;
+    --margin-container: 2%;
+    --branch-card-border-radius: 3%;
+    --branch-card-box-shadow: 5px 5px 10px #0F0F0F;
+    ;
+}
+
+.branches-container {
+    margin: var(--margin-container);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(var(--margin-container) * 3) var(--margin-container);
+}
+
+.card-branch {
+    color: var(--branch-letters-color);
+    background-color: var(--branch-card-background-color);
+    width: 40em;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--branch-card-border-radius);
+    box-shadow: var(--branch-card-box-shadow);
+    font-size: 15px;
+}
+
+.card-branch-img {
+    overflow: hidden;
+    width: 100%;
+    border-radius: var(--branch-card-border-radius) var(--branch-card-border-radius) 0 0;
+}
+
+.card-branch-title {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.card-branch-address {
+    font-family: Poppins, sans-serif;
+    text-align: justify;
+    margin: 4%;
+    font-size: 1.2em;
+}
+
+h1 {
+    color: var(--title-color);
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: relative;
+    display: block;
+    margin: 0 auto 2% auto;
+    width: 8em;
+    text-align: center;
+    border-bottom: 1px solid var(--letters-color);
+}
+
+#space {
+    width: 100%;
+    height: 2%;
+}

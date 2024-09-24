@@ -1,0 +1,73 @@
+:root {
+    --users-width: 95%;
+    --name-width: 20%;
+    --mail-width: 40%;
+    --phone-width: 30%;
+    --options-width: 10%;
+}
+
+#users-controller {
+    background-color: #b4b4b4;
+    width: var(--users-width);
+    margin: 2em auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+
+.user-info,
+.user-info-title {
+    background-color: ghostwhite;
+    border-radius: 8px;
+    width: var(--users-width);
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.user-info-title div {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.user-info div {
+    margin: 5px;
+}
+
+.user-name,
+.name-title {
+    width: var(--name-width);
+}
+
+.user-phone,
+.phone-title {
+    width: var(--phone-width);
+}
+
+.user-mail,
+.mail-title {
+    width: var(--mail-width);
+}
+
+.options,
+.options-title {
+    width: var(--options-width);
+}
+
+@media (max-width: 930px) {
+    #users-controller {
+        font-size: 65%;
+    }
+}
+
+@media (max-width: 500px) {
+    #users-controller {
+        font-size: 45%;
+    }
+}

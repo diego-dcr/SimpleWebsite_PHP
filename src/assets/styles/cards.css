@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+:root {
+    --background-color-card: #F1F1F1;
+    --border-text-separation: 2%;
+    --border-radius-card: 5px;
+    --card-width: 32em;
+    --card-info-height: 30%;
+    --card-info-width: 40%;
+    --images-shadow: 5px 5px 10px rgba(0, 0, 0, .7);
+    --button-padding: 0.6em;
+    --buy-border-radius: 7px;
+    --cost-color: #2BCA00;
+    --button-font-size: 85%;
+    --buy-border: 0.5px solid #6A6A6A;
+}
+
+b {
+    font-family: "Poppins", sans-serif;
+    color: #FF0049;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 1.5%;
+    background-color: var(--background-color-card);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--images-shadow);
+    width: calc(var(--card-width) - 10em);
+    display: flex;
+}
+
+.card-information {
+    margin: 3%;
+    width: var(--card-info-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 85%;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-description {
+    font-size: 70%;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    margin-top: 0;
+}
+
+.card-img {
+    width: calc(100% - var(--card-info-width));
+    border-radius: 0 var(--border-radius-card) var(--border-radius-card) 0;
+    overflow: hidden;
+}
+
+.buy-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.card-button {
+    border: var(--buy-border);
+    border-radius: 0 var(--buy-border-radius) var(--buy-border-radius) 0;
+    font-size: 70%;
+    transition: background-color ease 200ms;
+}
+
+.card-button:hover {
+    background-color: #B0B0B0;
+}
+
+.cost {
+    border: var(--buy-border);
+    border-radius: var(--buy-border-radius) 0 0 var(--buy-border-radius);
+    padding: var(--button-padding);
+    background-color: var(--cost-color);
+    font-size: var(--button-font-size);
+}
+
+#unidades {
+    padding: var(--button-padding);
+}
+
+h1 {
+    color: var(--title-color);
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: relative;
+    display: block;
+    margin: 0 auto 2% auto;
+    width: 8em;
+    text-align: center;
+    border-bottom: 1px solid var(--letters-color);
+}
+
+@media(min-width: 500px) {
+    .card {
+        margin: 1.5%;
+        background-color: var(--background-color-card);
+        border-radius: var(--border-radius-card);
+        box-shadow: var(--images-shadow);
+        width: var(--card-width);
+        display: flex;
+    }
+    .card-information {
+        margin: 3%;
+        width: var(--card-info-width);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card-title {
+        text-align: center;
+        font-size: 120%;
+        font-family: Poppins, sans-serif;
+        font-weight: bold;
+        margin: 0;
+    }
+    .card-description {
+        font-size: 100%;
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        margin-top: 0;
+    }
+    .card-img {
+        width: calc(100% - var(--card-info-width));
+        border-radius: 0 var(--border-radius-card) var(--border-radius-card) 0;
+        overflow: hidden;
+    }
+}
+
+@media(min-width: 1400px) {
+    h1 {
+        font-size: 2em;
+        width: 10%;
+    }
+}

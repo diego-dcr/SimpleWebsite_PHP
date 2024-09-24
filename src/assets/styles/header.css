@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+:root {
+    --principal-color: #303030;
+    --secondary-color: #131313;
+    --letters-color: #E7BD70;
+    --title-color: #F1F1F1;
+    --header-height: 8em;
+    --icons-color: whitesmoke;
+    --icons-color-hover: #FF0046;
+    --text-size: 1.3em;
+    --nav-bar-width: 70%;
+    --nav-li-width: 80%;
+    --header-menu-width: 75%;
+    --movil-screen: 930px;
+    --small-laptop-screen: 1300px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Varela Round", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: calc(var(--header-height) + 2em);
+    background-color: var(--principal-color);
+    position: relative;
+}
+
+header {
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: var(--header-height);
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+
+#Logo {
+    height: 100%;
+}
+
+#User-photo {
+    max-height: 60%;
+    margin: 0;
+    padding: 0;
+    display: none;
+    border-radius: 8px;
+}
+
+#User-photo:hover {
+    cursor: pointer;
+    border: 3px solid var(--icons-color-hover);
+}
+
+.Nav-bar,
+#Cart,
+#Login-icon,
+#admin-icon,
+#admin-icon-slid,
+.header-menu {
+    display: none;
+}
+
+#Menu-bars {
+    color: var(--icons-color);
+    font-size: calc(var(--text-size) + 0.7em);
+    transition: color ease 300ms;
+}
+
+#Menu-bars:hover {
+    color: var(--icons-color-hover);
+}
+
+#badge,
+#badge-slid {
+    font-size: 0.8em;
+    position: relative;
+    top: -0.8em;
+}
+
+#cart-sliding {
+    text-decoration: none;
+}
+
+#admin-icon,
+#admin-icon-slid {
+    color: var(--icons-color);
+    font-size: calc(var(--text-size) + 0.2em);
+}
+
+#Cart:hover,
+#Login-icon:hover,
+#admin-icon:hover,
+#admin-icon-slid:hover {
+    color: var(--icons-color-hover);
+}
+
+.photo-menu {
+    background-color: whitesmoke;
+    border-radius: 7px;
+    padding: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    left: 49%;
+    top: 80%;
+}
+
+.form-close {
+    margin: 0;
+}
+
+.photo-menu-li,
+#btnClose {
+    list-style: none;
+    padding: 10px;
+    transition: background-color ease 200ms;
+}
+
+.photo-menu-li:hover,
+#btnClose:hover {
+    border: 1px solid var(--letters-color);
+    color: var(--secondary-color);
+    background-color: var(--letters-color);
+    border-radius: 7px;
+}
+
+#btnClose {
+    font-size: 0.9em;
+    border-radius: 7px;
+    border: transparent;
+    background-color: transparent;
+}
+
+.photo-menu-a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+@media (min-width: 930px) {
+    header {
+        background-color: var(--secondary-color);
+        width: 100%;
+        height: var(--header-height);
+        left: 0;
+        top: 0;
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 1;
+    }
+    #Logo {
+        max-height: 100%;
+        left: 60px;
+        margin-left: 5%;
+    }
+    #User-photo {
+        max-height: 60%;
+        margin-right: 20px;
+    }
+    .header-menu {
+        width: var(--header-menu-width);
+        display: flex;
+        justify-content: space-between;
+    }
+    .Nav-bar {
+        width: var(--nav-bar-width);
+        display: flex;
+    }
+    .Nav {
+        display: flex;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Nav li {
+        width: var(--nav-li-width);
+        text-align: center;
+    }
+    .Nav a {
+        font-size: var(--text-size);
+        color: var(--letters-color);
+        text-decoration: none;
+        text-align: center;
+    }
+    .Nav a:hover {
+        border: 1px solid var(--letters-color);
+        color: var(--secondary-color);
+        background-color: var(--letters-color);
+        padding: 3px;
+        border-radius: 3px 3px 0 0;
+    }
+    .sub-Nav-bar {
+        list-style: none;
+        position: absolute;
+        display: flex;
+        top: 60%;
+        padding: 6px 0;
+        width: 45%;
+        font-size: 0.9em;
+    }
+    .sub-Nav-bar li {
+        text-align: center;
+    }
+    .sub-Nav-bar a {
+        color: var(--secondary-color);
+        transition: color, background-color ease 300ms;
+    }
+    .sub-Nav-bar a:hover {
+        border: 1px solid white;
+        color: var(--secondary-color);
+        background-color: white;
+        padding: 5px;
+        border-radius: 3px;
+    }
+    .sub-Nav-extra {
+        list-style: none;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 60%;
+        padding: 6px 0;
+        width: 25%;
+        font-size: 0.9em;
+    }
+    .sub-Nav-extra li {
+        text-align: center;
+    }
+    .sub-Nav-extra a {
+        color: var(--secondary-color);
+        transition: color, background-color ease 300ms;
+    }
+    .sub-Nav-extra a:hover {
+        border: 1px solid white;
+        color: var(--secondary-color);
+        background-color: white;
+        padding: 5px;
+        border-radius: 3px;
+    }
+    .Nav-buttons {
+        display: flex;
+        width: calc(100% - var(--nav-bar-width));
+        justify-content: space-evenly;
+    }
+    #Cart,
+    #Login-icon {
+        display: initial;
+        color: var(--icons-color);
+        font-size: calc(var(--text-size) + 0.2em);
+        text-decoration: none;
+    }
+    #Menu-bars {
+        display: none;
+    }
+    .Nav>li,
+    #Cart,
+    #Login-icon,
+    #admin-icon {
+        padding-bottom: 25px;
+    }
+    .login-menu {
+        background-color: whitesmoke;
+        border-radius: 7px;
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        left: 83.5%;
+        top: 50%;
+        display: none;
+    }
+    .login-menu-li {
+        list-style: none;
+        padding: 10px;
+        transition: background-color ease 200ms;
+    }
+    .login-menu-li:hover {
+        border: 1px solid var(--letters-color);
+        color: var(--secondary-color);
+        background-color: var(--letters-color);
+        border-radius: 7px;
+    }
+    .login-menu-a {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+    .photo-menu {
+        background-color: whitesmoke;
+        border-radius: 7px;
+        padding: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        left: 89.2%;
+        top: 80%;
+    }
+    .photo-menu-li,
+    #btnClose {
+        list-style: none;
+        padding: 10px;
+        transition: background-color ease 200ms;
+    }
+    .photo-menu-li:hover,
+    #btnClose:hover {
+        border: 1px solid var(--letters-color);
+        color: var(--secondary-color);
+        background-color: var(--letters-color);
+        border-radius: 7px;
+    }
+    #btnClose {
+        font-size: 0.9em;
+        border-radius: 7px;
+        border: transparent;
+        background-color: transparent;
+    }
+    .photo-menu-a {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+    .form-close {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 930px) and (max-width: 1200px) {
+    .Nav a {
+        font-size: 1.1em;
+    }
+    #Cart,
+    #Login-icon,
+    #admin-icon {
+        font-size: 1.3em;
+    }
+}

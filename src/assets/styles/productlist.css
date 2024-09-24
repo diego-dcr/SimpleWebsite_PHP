@@ -1,0 +1,111 @@
+:root {
+    --container-width: 60%;
+    --container-height: 28em;
+    --table-width: 70%;
+    --table-height: 10em;
+    --table-left: 15%;
+    --table-top: 10%;
+    --table-border-rad: 5px;
+    --button-submit-color: #2BCA00;
+    --button-submit-color-hover: #007E13;
+    --button-cancel-color: #FF0049;
+    --button-cancel-color-hover: #AF0031;
+}
+
+.product-list-container {
+    background-color: whitesmoke;
+    margin: 2% auto;
+    width: var(--container-width);
+    height: var(--container-height);
+    border-radius: 10px;
+    position: relative;
+}
+
+#product-list {
+    width: var(--table-width);
+    height: var(--table-height);
+    text-align: center;
+    position: absolute;
+    top: var(--table-top);
+    left: var(--table-left);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: lightgray;
+    border-radius: var(--table-border-rad);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product span {
+    width: 30%;
+}
+
+#price {
+    position: absolute;
+    right: var(--table-left);
+    top: calc(var(--table-top) * 5.5);
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: var(--table-border-rad);
+}
+
+.buttons {
+    position: absolute;
+    top: calc(var(--table-top) * 8);
+    left: var(--table-left);
+    width: var(--table-width);
+    display: flex;
+    justify-content: space-around;
+}
+
+#button-confirm {
+    cursor: pointer;
+    background-color: var(--button-submit-color);
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 0.85em;
+    padding: var(--padding-button-sUP);
+    transition: background-color ease 300ms;
+}
+
+#button-confirm:hover {
+    background-color: var(--button-submit-color-hover);
+}
+
+#button-cancel {
+    cursor: pointer;
+    background-color: var(--button-cancel-color);
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 0.85em;
+    padding: var(--padding-button-sUP);
+    transition: background-color ease 300ms;
+}
+
+#button-cancel:hover {
+    background-color: var(--button-cancel-color-hover);
+}
+
+@media (max-width: 550px) {
+    .product-list div,
+    #price {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 960px) {
+    .product-list-container {
+        width: calc(var(--container-width) + 30%);
+    }
+}
+
+@media (min-width: 1300px) {
+    .product-list-container {
+        width: 50%;
+    }
+}
